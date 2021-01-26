@@ -6,8 +6,6 @@ function HeaderButton(props) {
   const [style, setStyle] = useState(props.themes.blue);
 
   const change = () => {
-    console.log(props.themes.black);
-    console.log(style);
     if (style === props.themes.black) {
       setStyle(props.themes.blue);
     } else {
