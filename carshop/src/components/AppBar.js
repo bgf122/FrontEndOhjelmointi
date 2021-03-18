@@ -12,7 +12,7 @@ export default function AppBar(props) {
                     <Typography style={{flexGrow: 1}} variant="h6" >
                         Carshop
                     </Typography>
-                    <AddCar saveCar={props.saveCar}/>
+                    <AddCar fetchData={props.fetchData}/>
                 </Toolbar>
             </Appbar>
         </div>

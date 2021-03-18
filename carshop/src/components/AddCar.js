@@ -26,7 +26,15 @@ export default function AddCar(props) {
     }
 
     const addCar = () => {
-        props.saveCar(car);
+        fetch("https://carstockrest.herokuapp.com/cars", {
+            method: 'Post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(car)
+        })
+        .then(res => props.fetchData())
+        .catch(err => console.log(err));
         handleClose();
     }
 
@@ -93,7 +101,7 @@ export default function AddCar(props) {
                         Cancel
                     </Button>
                     <Button onClick={addCar} color="primary">
-                        Save
+                        Add
                     </Button>
                 </DialogActions>
             </Dialog>

@@ -96,7 +96,7 @@ export default function Carlist() {
 
     return (
         <div style={{height: '100%', width: '100%', margin: 'auto'}}>
-            <AppBar saveCar={saveCar}/>
+            <AppBar fetchData={fetchData}/>
             <div style={{display: 'flex', justifyContent:'center'}}>
                 <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
                     <Alert severity="warning">Car deleted!</Alert>
